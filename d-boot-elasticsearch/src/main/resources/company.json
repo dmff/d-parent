@@ -1,0 +1,6 @@
+{ "index": { "_id": "london" }}
+{ "name": "London Westminster", "city": "London", "country": "UK" }
+{ "index": { "_id": "liverpool" }}
+{ "name": "Liverpool Central", "city": "Liverpool", "country": "UK" }
+{ "index": { "_id": "paris" }}
+{ "name": "Champs Elysees", "city": "Paris", "country": "France" }

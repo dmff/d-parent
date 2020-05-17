@@ -1,0 +1,541 @@
+{
+    "order": 0,
+    "template": "open5",
+    "settings": {
+        "index": {
+            "analysis": {
+                "analyzer": {
+                    "analysis-ik": {
+                        "tokenizer": "ik_max_word"
+                    }
+                }
+            },
+            "number_of_shards": "5",
+            "number_of_replicas": "2"
+        }
+    },
+    "mappings": {
+        "positions": {
+            "_all": {
+                "enabled": false
+            },
+            "properties": {
+                "createBy": {
+                    "type": "keyword"
+                },
+                "createDate": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                },
+                "modify_by": {
+                    "type": "keyword"
+                },
+                "modify_date": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                },
+                "chainName": {
+                    "type": "keyword"
+                },
+                "companyId": {
+                    "type": "keyword"
+                },
+                "companyName": {
+                    "type": "keyword"
+                },
+                "department": {
+                    "type": "keyword"
+                },
+                "functionCode": {
+                    "type": "keyword"
+                },
+                "functionName": {
+                    "type": "keyword"
+                },
+                "name": {
+                    "type": "keyword"
+                },
+                "needPublish": {
+                    "type": "boolean"
+                },
+                "portraitPath": {
+                    "type": "keyword"
+                },
+                "positionId": {
+                    "type": "keyword"
+                },
+                "positionSource": {
+                    "type": "keyword"
+                },
+                "positonDesc": {
+                    "type": "text",
+                    "analyzer": "ik_max_word"
+                },
+                "publishDate": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                },
+                "publisher": {
+                    "type": "keyword"
+                },
+                "publishFromBeilie": {
+                    "type": "boolean"
+                },
+                "publishOrg": {
+                    "type": "keyword"
+                },
+                "reamrkRecruitmentReason": {
+                    "type": "keyword"
+                },
+                "recruitNum": {
+                    "type": "short"
+                },
+                "refreshDate": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                },
+                "remarkEmergencyDegree": {
+                    "type": "keyword"
+                },
+                "remarkTarget": {
+                    "type": "text",
+                    "analyzer": "ik_max_word"
+                },
+                "reportTo": {
+                    "type": "keyword"
+                },
+                "requireAgeMax": {
+                    "type": "byte"
+                },
+                "requireAgeMin": {
+                    "type": "byte"
+                },
+                "requireDegreeMin": {
+                    "type": "keyword"
+                },
+                "requireIndustryKey": {
+                    "type": "keyword"
+                },
+                "requireIndustryValue": {
+                    "type": "keyword"
+                },
+                "requireLanaguageOthers": {
+                    "type": "keyword"
+                },
+                "requireLanguagesKey": {
+                    "type": "keyword"
+                },
+                "requireLanguagesValue": {
+                    "type": "keyword"
+                },
+                "requireMajor": {
+                    "type": "keyword"
+                },
+                "requireRecruitment": {
+                    "type": "boolean"
+                },
+                "requireSex": {
+                    "type": "keyword"
+                },
+                "requireWorkYearMin": {
+                    "type": "byte"
+                },
+                "salaryMax": {
+                    "type": "integer"
+                },
+                "salaryMin": {
+                    "type": "integer"
+                },
+                "status": {
+                    "type": "keyword"
+                },
+                "stickDate": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                },
+                "subordinateNum": {
+                    "type": "integer"
+                },
+                "welfareOthers": {
+                    "type": "text",
+                    "analyzer": "ik_max_word"
+                },
+                "welfares": {
+                    "type": "text"
+                },
+                "workPlacesKey": {
+                    "type": "keyword"
+                },
+                "workPlacesValue": {
+                    "type": "keyword"
+                }
+            }
+        },
+        "applicants": {
+            "_all": {
+                "enabled": true
+            },
+            "properties": {
+                "createBy": {
+                    "type": "keyword"
+                },
+                "createDate": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                },
+                "modify_by": {
+                    "type": "keyword"
+                },
+                "modify_date": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                },
+                "chainName": {
+                    "type": "keyword"
+                },
+                "applicantId": {
+                    "type": "keyword"
+                },
+                "applyStatus": {
+                    "type": "keyword"
+                },
+                "birthday": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                },
+                "companyName": {
+                    "type": "keyword"
+                },
+                "companyNames": {
+                    "type": "keyword"
+                },
+                "companyType": {
+                    "type": "keyword"
+                },
+                "degree": {
+                    "type": "keyword"
+                },
+                "degreeLevel": {
+                    "type": "keyword"
+                },
+                "degreeName": {
+                    "type": "keyword"
+                },
+                "expectFunctionCodes": {
+                    "type": "keyword"
+                },
+                "expectFunctionNames": {
+                    "type": "keyword"
+                },
+                "expectIndustryAll": {
+                    "type": "keyword"
+                },
+                "expectIndustryCodes": {
+                    "type": "keyword"
+                },
+                "expectIndustryNames": {
+                    "type": "keyword"
+                },
+                "expectWorkplaceAll": {
+                    "type": "keyword"
+                },
+                "expectWorkplaceCodes": {
+                    "type": "keyword"
+                },
+                "expectWorkplaceNames": {
+                    "type": "keyword"
+                },
+                "expectYearSalary": {
+                    "type": "keyword"
+                },
+                "functionCode": {
+                    "type": "keyword"
+                },
+                "functionName": {
+                    "type": "keyword"
+                },
+                "industryCode": {
+                    "type": "keyword"
+                },
+                "industryName": {
+                    "type": "keyword"
+                },
+                "isNineEightFive": {
+                    "type": "boolean"
+                },
+                "isTwoEleven": {
+                    "type": "boolean"
+                },
+                "languageCodes": {
+                    "type": "keyword"
+                },
+                "languageNames": {
+                    "type": "keyword"
+                },
+                "locationCode": {
+                    "type": "keyword"
+                },
+                "locationName": {
+                    "type": "keyword"
+                },
+                "marjor": {
+                    "type": "text"
+                },
+                "name": {
+                    "type": "keyword"
+                },
+                "positionName": {
+                    "type": "text"
+                },
+                "lastEducation": {
+                    "type": "object",
+                    "properties": {
+                        "degree": {
+                            "type": "keyword"
+                        },
+                        "finish": {
+                            "type": "keyword"
+                        },
+                        "major": {
+                            "type": "keyword"
+                        },
+                        "recruitment": {
+                            "type": "boolean"
+                        },
+                        "school": {
+                            "type": "keyword"
+                        },
+                        "start": {
+                            "type": "date"
+                        }
+                    }
+                },
+                "lastWork": {
+                    "type": "object",
+                    "properties": {
+                        "company": {
+                            "type": "keyword"
+                        },
+                        "companyType": {
+                            "type": "keyword"
+                        },
+                        "end": {
+                            "type": "date"
+                        },
+                        "functionCode": {
+                            "type": "keyword"
+                        },
+                        "functionName": {
+                            "type": "keyword"
+                        },
+                        "industryCode": {
+                            "type": "keyword"
+                        },
+                        "industryName": {
+                            "type": "keyword"
+                        },
+                        "monthNum": {
+                            "type": "integer"
+                        },
+                        "monthSalary": {
+                            "type": "integer"
+                        },
+                        "position": {
+                            "type": "keyword"
+                        },
+                        "secrecySalary": {
+                            "type": "boolean"
+                        },
+                        "start": {
+                            "type": "date"
+                        }
+                    }
+                },
+                "content": {
+                    "type": "keyword"
+                }
+            }
+        },
+        "position_childs": {
+            "_parent": {
+                "type": "applicants"
+            },
+            "_all": {
+                "enabled": true
+            },
+            "properties": {
+                "createBy": {
+                    "type": "keyword"
+                },
+                "createDate": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                },
+                "modify_by": {
+                    "type": "keyword"
+                },
+                "modify_date": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                },
+                "chainName": {
+                    "type": "keyword"
+                },
+                "applicantName": {
+                    "type": "keyword"
+                },
+                "applyProgress": {
+                    "type": "keyword"
+                },
+                "canceled": {
+                    "type": "boolean"
+                },
+                "companyId": {
+                    "type": "keyword"
+                },
+                "logSource": {
+                    "type": "keyword"
+                },
+                "positionId": {
+                    "type": "keyword"
+                },
+                "positionName": {
+                    "type": "text"
+                },
+                "publisher": {
+                    "type": "keyword"
+                },
+                "recommendId": {
+                    "type": "keyword"
+                },
+                "recommendProgress": {
+                    "type": "keyword"
+                },
+                "recommendStatus": {
+                    "type": "keyword"
+                }
+            }
+        },
+        "applicant_childs": {
+            "_parent": {
+                "type": "applicants"
+            },
+            "_all": {
+                "enabled": true
+            },
+            "properties": {
+                "createBy": {
+                    "type": "keyword"
+                },
+                "createDate": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                },
+                "modify_by": {
+                    "type": "keyword"
+                },
+                "modify_date": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                },
+                "chainName": {
+                    "type": "keyword"
+                },
+                "applicantName": {
+                    "type": "keyword"
+                },
+                "applyProgress": {
+                    "type": "keyword"
+                },
+                "canceled": {
+                    "type": "boolean"
+                },
+                "companyId": {
+                    "type": "keyword"
+                },
+                "logSource": {
+                    "type": "keyword"
+                },
+                "positionId": {
+                    "type": "keyword"
+                },
+                "positionName": {
+                    "type": "text"
+                },
+                "publisher": {
+                    "type": "keyword"
+                },
+                "recommendId": {
+                    "type": "keyword"
+                },
+                "recommendProgress": {
+                    "type": "keyword"
+                },
+                "recommendStatus": {
+                    "type": "keyword"
+                }
+            }
+        },
+        "test": {
+            "_parent": {
+                "type": "applicants"
+            },
+            "_all": {
+                "enabled": true
+            },
+            "properties": {
+                "createBy": {
+                    "type": "keyword"
+                },
+                "createDate": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                },
+                "modify_by": {
+                    "type": "keyword"
+                },
+                "modify_date": {
+                    "type": "date",
+                    "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                },
+                "chainName": {
+                    "type": "keyword"
+                },
+                "applicantName": {
+                    "type": "keyword"
+                },
+                "applyProgress": {
+                    "type": "keyword"
+                },
+                "canceled": {
+                    "type": "boolean"
+                },
+                "companyId": {
+                    "type": "keyword"
+                },
+                "logSource": {
+                    "type": "keyword"
+                },
+                "positionId": {
+                    "type": "keyword"
+                },
+                "positionName": {
+                    "type": "text"
+                },
+                "publisher": {
+                    "type": "keyword"
+                },
+                "recommendId": {
+                    "type": "keyword"
+                },
+                "recommendProgress": {
+                    "type": "keyword"
+                },
+                "recommendStatus": {
+                    "type": "keyword"
+                }
+            }
+        }
+    },
+    "aliases": { }
+}

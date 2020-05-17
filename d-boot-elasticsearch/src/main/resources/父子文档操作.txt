@@ -1,0 +1,25 @@
+参考博客：https://blog.csdn.net/napoay/article/details/52032931
+1.首先创建索引和mapping，需要指定父子文档
+    curl -XPUT  "http://192.168.0.224:9200/company" -d '
+    {
+      "mappings": {
+        "branch": {},
+        "employee": {
+          "_parent": {
+            "type": "branch"
+          }
+        }
+      }
+    }
+
+2.然后插入数据
+   curl -XPOST "http://ip:9200/company/branch/_bulk?pretty" --data-binary @company.json
+   curl -XPOST "http://192.168.0.224:9200/company/employee/_bulk?pretty" --data-binary @employee.json
+   或者使用postman
+   http://ip:9200/company/branch/_bulk
+   http://ip:9200/company/employee/_bulk
+   参数类型为binary；然后对应的选择json文件就可以了
+
+3.通过子文档的条件查询出父文档，需要说明score_mode表示的是统计子文档命中的分数
+4.通过父文档查询子文档，score表示父文档命中的分数是否传递给子文档
+5.需要说明es的java客户端版本为5.3.0，使用5.5以上版本目前没有找到hasParent和hasChild
