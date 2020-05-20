@@ -1,7 +1,7 @@
 package com.dmf.bootstarter.logger;
 
 import ch.qos.logback.classic.helpers.MDCInsertingServletFilter;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.MDC;
 
 import javax.servlet.FilterChain;

@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 主要用于调用第三方接口时获取子线程日志，比如dubbo、rpc等等
  * @author dengmingfeng
  * @date 2020/4/20
  */

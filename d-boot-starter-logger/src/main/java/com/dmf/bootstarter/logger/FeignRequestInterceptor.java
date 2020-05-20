@@ -1,6 +1,5 @@
 package com.dmf.bootstarter.logger;
 
-import com.netflix.ribbon.RequestTemplate;
 
 /**
  * @author dengmingfeng
