@@ -71,11 +71,11 @@
 			<version>27.1-jre</version>
 		</dependency>
 
-		<dependency>
+		<!--<dependency>
 			<groupId>com.biubiu</groupId>
 			<artifactId>javasoft-collection</artifactId>
 			<version>1.0.0</version>
-		</dependency>
+		</dependency>-->
 
 	</dependencies>
 
