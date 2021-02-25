@@ -19,7 +19,7 @@
         <elasticsearch.version>5.3.0</elasticsearch.version>
         <spring-version>5.0.0.RC3</spring-version>
         <fastjson-version>1.2.68</fastjson-version>
-        <junit-version>4.12</junit-version>
+        <junit-version>4.13.1</junit-version>
         <slf4j-version>1.7.5</slf4j-version>
         <ik.version>5.3.0</ik.version>
         <spring-test-version>4.1.6.RELEASE</spring-test-version>
