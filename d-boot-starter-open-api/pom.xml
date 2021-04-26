@@ -32,7 +32,7 @@
         <redisson.version>3.5.4</redisson.version>
         <commons-lang3.version>3.4</commons-lang3.version>
         <commons-collections.version>3.2.2</commons-collections.version>
-        <commons-io.version>2.5</commons-io.version>
+        <commons-io.version>2.7</commons-io.version>
         <commons-net.version>3.2</commons-net.version>
         <commons-codec.version>1.10</commons-codec.version>
         <commons-compress.version>1.19</commons-compress.version>
