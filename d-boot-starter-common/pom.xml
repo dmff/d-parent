@@ -24,7 +24,7 @@
         </dependency>
 
 
-        <dependency>
+        <!--<dependency>
             <groupId>com.beilie</groupId>
             <artifactId>com-beilie-core</artifactId>
             <version>1.0.3-SNAPSHOT</version>
@@ -46,7 +46,7 @@
             <groupId>com.beilie</groupId>
             <artifactId>com-beilie-huayra-core</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.projectlombok</groupId>
