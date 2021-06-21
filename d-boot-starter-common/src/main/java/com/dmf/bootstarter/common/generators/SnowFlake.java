@@ -81,9 +81,9 @@ public class SnowFlake {
             throw new RuntimeException("Clock moved backwards.  Refusing to generate id");
         }
 
-        //相同时间戳内序列号递增
+        //相同时间戳内序列号递增，意思是1毫秒内只能有4096个数字
         if (currStmp == lastStmp) {
-            sequence = (sequence + 1) ^ MAX_SEQUENCE;
+            sequence = (sequence + 1) & MAX_SEQUENCE;
             if (sequence == 0L) {
                 currStmp = getNextMill();
             }
