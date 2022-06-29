@@ -41,7 +41,7 @@
         <alibaba.common.lang.version>1.0</alibaba.common.lang.version>
         <log4j2.version>2.13.3</log4j2.version>
         <disruptor.version>3.3.6</disruptor.version>
-        <slf4j.version>1.7.25</slf4j.version>
+        <slf4j.version>1.7.26</slf4j.version>
         <junit.version>4.12</junit.version>
         <guava.version>21.0</guava.version>
         <javax.servlet.version>3.1.0</javax.servlet.version>
